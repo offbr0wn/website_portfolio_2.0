@@ -27,7 +27,7 @@ export default function SocialMediaicon() {
     },
   ];
 
-  console.log(SocialItems[0]?.socialName);
+  
   return (
     <div className=" w-full h-auto py-8 flex items-center justify-center gap-4 flex-wrap">
       {SocialItems?.map((item, index) => (
