@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Suspense } from "react";
+import Loading from "./loading";
+import { cn } from "./utils/cn";
+import Footer from "./components/footer";
+import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +20,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="scroll-smooth">
+      <body
+        className={cn(
+          "bg-gradient-to-tl from-black via-zinc-500/20 to-black",
+          inter.className
+        )}
+      >
+        <Suspense fallback={<Loading />}>
+          <div className="flex flex-col">
+            <Providers>
+              <main className="flex-auto   flex-col  md:px-0 py-10 dark text-foreground ">
+                {children}
+              </main>
+            </Providers>
+            <Footer />
+          </div>
+        </Suspense>
+      </body>
     </html>
   );
 }
