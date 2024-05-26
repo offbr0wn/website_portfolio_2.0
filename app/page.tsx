@@ -93,7 +93,7 @@ export default function Home() {
           <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
           <Particles
             className="absolute inset-0 -z-5 w-screen h-screen animate-fade-in"
-            quantity={5000}
+            quantity={100}
           />
 
           <Spotlight
@@ -101,7 +101,7 @@ export default function Home() {
             fill="white"
           />
 
-          <h1 className="z-10 text-4xl text-transparent duration-5000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-5xl md:text-7xl  whitespace-nowrap bg-clip-text ">
+          <h1 className="z-10 text-4xl text-transparent duration-5000 bg-white cursor-default text-edge-outline animate-title font-calSans sm:text-5xl md:text-7xl  whitespace-nowrap bg-clip-text ">
             <Link
               href="/"
               className="underline duration-5000 hover:text-zinc-300"
@@ -124,7 +124,7 @@ export default function Home() {
               experiences..
             </h2>
             <div className="mt-5  ">
-            <SocialMediaicon />
+              <SocialMediaicon />
             </div>
           </div>
         </div>
@@ -132,12 +132,12 @@ export default function Home() {
       <section>
         {/* Second Section */}
         <div
-          className="  flex flex-col items-center justify-center w-screen  min-h-1/2  md:px-[20vw] "
+          className="  flex flex-col items-center justify-center w-screen  min-h-1/2  md:px-[20vw] delay-[300ms] duration-[600ms] taos:translate-x-[-200px] taos:opacity-0 "
           id="about"
+          data-taos-offset="400"
         >
           {/* <CardRevelScroll content={content} /> */}
           <NextUiCard />
-        
         </div>
       </section>
     </>
