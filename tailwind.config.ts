@@ -37,7 +37,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
-        calSans:["var(--font-calsans)", ...defaultTheme.fontFamily.calSans],
+        calSans:["var(--font-cal)"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
