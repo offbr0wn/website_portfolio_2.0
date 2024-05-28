@@ -17,27 +17,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      typography: {
-        DEFAULT: {
-          css: {
-            "code::before": {
-              content: '""',
-            },
-            "code::after": {
-              content: '""',
-            },
-          },
-        },
-        quoteless: {
-          css: {
-            "blockquote p:first-of-type::before": { content: "none" },
-            "blockquote p:first-of-type::after": { content: "none" },
-          },
-        },
-      },
+      typography: {},
       fontFamily: {
         sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
-        calSans:["var(--font-cal)"],
+        calSans: ["var(--font-cal)"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -123,7 +106,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [addVariablesForColors, nextui(), require("taos/plugin")],
+  plugins: [addVariablesForColors, nextui()],
 };
 export default config;
 

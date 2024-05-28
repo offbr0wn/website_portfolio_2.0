@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="my-12 px-[20vw]">
+    <footer className="my-12 px-[20vw] h-[20px] items-center justify-center flex">
       <p className="text-center text-zinc-400 text-xs">
         Made with ❤️ by
         <Link href="/" className="text-red-300 hover:underline px-1">

@@ -7,7 +7,8 @@ import { cn } from "./utils/cn";
 import Footer from "./components/footer";
 import { Providers } from "./providers";
 import LocalFont from "next/font/local";
-
+import NavBar from "./components/ui/nav-bar";
+import { headers } from "next/headers";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -44,24 +45,30 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // read the custom x-url header
+  const headersList = headers();
+  // read the custom x-url header
+  const header_url = headersList.get("x-pathname") || "";
+
   return (
     <html
       lang="en"
       className={cn(
-        "scroll-smooth",
+        "scroll-smooth bg-black",
         [inter.variable, calSans.variable].join(" ")
       )}
     >
-      <body className="bg-gradient-to-tl from-black via-zinc-400/20 to-black">
+      <body className="  bg-gradient-to-tl from-black via-zinc-400/20 to-black bg-black overflow-x-hidden">
         <Suspense fallback={<Loading />}>
-          <div className="flex flex-col min-h-screen">
-            <Providers>
-              <main className="flex-auto   flex-col  dark text-foreground px-6 py-12 md:px-12 md:py-20">
+          <Providers>
+            <div className="flex flex-col min-h-screen   dark text-foreground">
+              {header_url.split("/").slice(-1)[0] === "" ? null : <NavBar />}
+              <main className="flex justify-center   flex-col  px-6 py-12 md:px-12 md:py-10">
                 {children}
               </main>
-            </Providers>
-            <Footer />
-          </div>
+              <Footer />
+            </div>
+          </Providers>
         </Suspense>
       </body>
     </html>

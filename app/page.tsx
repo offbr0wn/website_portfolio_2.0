@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 import NextUiCard from "./components/ui/next-ui-card";
 import HeroSection from "./components/(HomeScreen)/heroSection";
 import { motion, useScroll, useTransform } from "framer-motion";
-import SectionSectionHomeScreen from "./components/(HomeScreen)/second-section";
+import SectionSectionHomeScreen from "./components/(HomeScreen)/secondSection";
 
 export default function Home() {
   useEffect(() => {
