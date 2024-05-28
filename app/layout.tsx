@@ -45,11 +45,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // read the custom x-url header
-  const headersList = headers();
-  // read the custom x-url header
-  const header_url = headersList.get("x-pathname") || "";
-
   return (
     <html
       lang="en"
@@ -62,7 +57,6 @@ export default function RootLayout({
         <Suspense fallback={<Loading />}>
           <Providers>
             <div className="flex flex-col min-h-screen   dark text-foreground">
-              {header_url.split("/").slice(-1)[0] === "" ? null : <NavBar />}
               <main className="flex justify-center   flex-col  px-6 py-12 md:px-12 md:py-10">
                 {children}
               </main>

@@ -34,7 +34,7 @@ export default function ContactPage() {
       {/* <h1 className="text-center text-4xl sm:text-7xl font-black font-calSans  bg-clip-text text-transparent  bg-gradient-to-r from-pink-500 to-violet-500  py-8 ">
           Contact
         </h1> */}
-
+      <NavBar />
       <div className=" mt-20 grid w-screen grid-cols-1 gap-8 mx-auto  sm:mt-20 sm:grid-cols-3 lg:gap-16 ">
         {socials?.map((social, index) => (
           <React.Fragment key={index}>
