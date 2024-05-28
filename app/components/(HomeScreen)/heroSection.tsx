@@ -30,18 +30,18 @@ function HeroSection() {
         </ul>
       </nav>
       {/* Main section with line above and botton of main heading  */}
-      <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <Particles
         className="absolute inset-0 -z-5 w-screen h-screen animate-fade-in"
-        quantity={500}
+        quantity={50}
       />
 
       <Spotlight
-        className="-top-20 -left-10 md:left-60 md:-top-20"
+        className="top-0 -left-10 md:left-60 md:-top-20"
         fill="white"
       />
+      <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 
-      <h1 className="z-10 text-4xl text-transparent duration-5000 bg-white cursor-default text-edge-outline animate-title font-calSans sm:text-5xl md:text-7xl  whitespace-nowrap bg-clip-text font-black">
+      <h1 className="z-20 text-3xl text-transparent duration-4000 bg-white cursor-default text-edge-outline animate-title font-calSans sm:text-5xl md:text-7xl  whitespace-nowrap bg-clip-text font-black ">
         <ToolTipWrapper>
           <Link
             href="/Shashank_Ravikumar_CV.pdf"
@@ -60,10 +60,10 @@ function HeroSection() {
       {/* Subtitle for main section */}
 
       <div className=" text-center animate-fade-in  mt-5 flex-col">
-        <h2 className=" md:text-2xl   my-0">
+        <h2 className=" md:text-2xl text-sm  my-0">
           <TextGenerateEffect words={"Frontend React Developer"} />
         </h2>
-        <h2 className="text-tiny md:text-sm text-zinc-500 mt-10">
+        <h2 className="text-tiny md:text-sm text-zinc-500 mt-10 sm:mt-5">
           Hi There 👋,I'm Shashank Ravikumar
           <FlipWords
             words={["Developer", "Designer", "Frontend-Engineer"]}
