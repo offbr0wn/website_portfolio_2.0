@@ -19,10 +19,10 @@ export const TextGenerateEffect = ({
         opacity: 1,
       },
       {
-        duration: 2,
-        delay: stagger(0.2),
+        duration: 20,
+        delay: stagger(0.8),
       }
-    );
+    );5
   }, [scope.current]);
 
   const renderWords = () => {
@@ -45,7 +45,7 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("font-bold", className)}>
       <div>
-        <div className=" dark:text-white text-black text-2xl leading-snug tracking-wide">
+        <div className=" dark:text-zinc-800 font-light sm:text-xl leading-snug tracking-wide">
           {renderWords()}
         </div>
       </div>

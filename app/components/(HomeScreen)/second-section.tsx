@@ -14,7 +14,7 @@ export default function SectionSectionHomeScreen() {
     
      <div
           ref={ref}
-          className="  flex flex-col items-center justify-center   min-h-[80vh]  md:px-[20vw]  "
+          className="  flex flex-col items-center justify-center   min-h-[80vh]  md:px-[15vw]  "
           id="about"
         >
           <motion.div

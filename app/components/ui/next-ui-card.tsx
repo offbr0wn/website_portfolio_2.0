@@ -7,7 +7,7 @@ export default function NextUiCard() {
     <div className="  flex-col flex items-center justify-center ">
       <Tabs
         aria-label="Options"
-        isVertical={isVertical}
+        // isVertical={isVertical}
         className="  items-center justify-center "
       >
         <Tab key="about" title="About">
