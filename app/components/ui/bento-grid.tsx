@@ -1,5 +1,6 @@
 "use client";
 import { cn } from "@/app/utils/cn";
+import Link from "next/link";
 import { useRef, useState } from "react";
 
 export const BentoGrid = ({
@@ -27,12 +28,14 @@ export const BentoGridItem = ({
   description,
   header,
   icon,
+  link,
 }: {
   className?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
   header?: React.ReactNode;
   icon?: React.ReactNode;
+  link?: string;
 }) => {
   const divRef = useRef<HTMLDivElement>(null);
   const [isFocused, setIsFocused] = useState(false);
@@ -65,6 +68,8 @@ export const BentoGridItem = ({
   const handleMouseLeave = () => {
     setOpacity(0);
   };
+
+  console.log(link);
   return (
     <div
       ref={divRef}
@@ -87,13 +92,15 @@ export const BentoGridItem = ({
         <div className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-xl font-display">
           {title}
         </div>
-        <div className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300 text-xs">
+        <div className="my-2 leading-0 duration-150 text-zinc-400 group-hover:text-zinc-300 text-xs">
           {description}
         </div>
         <div className="py-1">
-          <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
-            Read more <span aria-hidden="true">&rarr;</span>
-          </p>
+          <Link href={link || "/"} target="_blank">
+            <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
+              Read more <span aria-hidden="true">&rarr;</span>
+            </p>
+          </Link>
         </div>
       </div>
     </div>

@@ -54,7 +54,7 @@ export default function NavBar() {
             Projects
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
+        <NavbarItem >
           <Link
             href="/contact"
             aria-current="page"
