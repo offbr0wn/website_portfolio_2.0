@@ -1,4 +1,4 @@
-import { ArrayDataItem } from "@/app/types/types";
+import { ExperienceProps } from "@/app/types/types";
 import {
   CardHeader,
   Button,
@@ -12,11 +12,7 @@ import { FaHeart, FaPause, FaPlaneArrival, FaShapes } from "react-icons/fa";
 import { FaDiagramNext } from "react-icons/fa6";
 import { FaArrowTrendUp } from "react-icons/fa6";
 
-export default function ExperienceCard({
-  experience,
-}: {
-  experience: ArrayDataItem;
-}) {
+export default function ExperienceCard({ experience }: ExperienceProps) {
   return (
     <Card
       isBlurred
@@ -37,7 +33,8 @@ export default function ExperienceCard({
               <div className="flex flex-col gap-0">
                 <h2 className=" font-bold text-base  capitalize leading-snug  text-slate-200 ">
                   <Link
-                    href={experience?.projectLink ?? null}
+                    
+                    href={experience?.projectLink }
                     className="  inline-flex   text-foreground/90 hover:text-red-400 focus-visible:text-red-400"
                     target="_blank"
                   >
@@ -69,7 +66,7 @@ export default function ExperienceCard({
             )}
             {/* Bottom content */}
 
-            {experience?.skillList && (
+            {"skillList" in experience && (
               <div className="flex w-full items-center justify-start mt-3  flex-wrap space-2">
                 {experience?.skillList?.map((item, index) => (
                   <Chip
