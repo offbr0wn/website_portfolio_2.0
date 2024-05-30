@@ -15,8 +15,8 @@ export default function NextUiCard() {
           <Card className="w-full">
             <CardBody className="space-y-5">
               <p>
-                Hello! 👋, I'm Shashank a software developer specializing in
-                frontend development, who's bread and butter is react and
+                Hello! 👋, I&apos;m Shashank a software developer specializing in
+                frontend development, who&apos;s bread and butter is react and
                 Typescript , I enjoy creating and designing things that live on
                 the internet. My interest in web development started back in
                 2017 when I decided to try editing custom elements within
@@ -24,7 +24,7 @@ export default function NextUiCard() {
                 design
               </p>
               <p>
-                Since the early days of my journey, I've been captivated by the
+                Since the early days of my journey, I&apos;ve been captivated by the
                 art of crafting exceptional digital experiences. As a developer,
                 I thrive on turning lines of code into functional and elegant
                 solutions. My goal is to not just create software, but to build

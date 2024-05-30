@@ -41,7 +41,7 @@ function HeroSection() {
       />
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 
-      <h1 className="z-20 text-3xl text-transparent duration-4000 bg-white cursor-default text-edge-outline animate-title font-calSans sm:text-5xl md:text-7xl  whitespace-nowrap bg-clip-text font-black ">
+      <h1 className="z-20 text-3xl text-transparent duration-8000 bg-white cursor-default text-edge-outline animate-title font-calSans sm:text-5xl md:text-7xl  whitespace-nowrap bg-clip-text font-black ">
         <ToolTipWrapper>
           <Link
             href="/Shashank_Ravikumar_CV.pdf"
@@ -64,7 +64,7 @@ function HeroSection() {
           <TextGenerateEffect words={"Frontend React Developer"} />
         </h2>
         <h2 className="text-tiny md:text-sm text-zinc-500 mt-10 sm:mt-5">
-          Hi There 👋,I'm Shashank Ravikumar
+          Hi There 👋,I&apos;m Shashank Ravikumar
           <FlipWords
             words={["Developer", "Designer", "Frontend-Engineer"]}
             className="w-max"

@@ -8,7 +8,7 @@ let interval: any;
 
 export const FlipWords = ({
   words,
-  duration = 3000,
+  duration = 2000,
   className,
 }: {
   words: string[];
@@ -23,7 +23,7 @@ export const FlipWords = ({
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  },);
 
   const startAnimation = () => {
     let i = 0;
