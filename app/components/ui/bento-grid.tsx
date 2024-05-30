@@ -92,7 +92,7 @@ export const BentoGridItem = ({
             width={1000}
             height={1000}
             alt="NextUI hero Image with delay"
-            src={header}
+            src={String(header)}
             className="w-full  flex flex-1 max-h-[6rem] rounded-xl  z-20 pb-2 object-center object-cover"
           />
         )}

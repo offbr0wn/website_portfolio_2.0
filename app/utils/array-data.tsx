@@ -1,9 +1,9 @@
 import React from "react";
 import { FaMobile, FaCloud } from "react-icons/fa";
-import { Image } from "@nextui-org/react";
-import MobileImage from "@/public/MobileImage.png";
 
-export const ArrayData = [
+import { ArrayDataItem, EducationItem, Item } from "../types/types";
+
+export const ArrayData: ArrayDataItem[] = [
   {
     data: "Jan 2023 - Mar 2024",
     projectLink: "https://www.unilink.com/",
@@ -67,7 +67,7 @@ export const ArrayData = [
   },
 ];
 
-export const EducationArray = [
+export const EducationArray: EducationItem[] = [
   {
     data: "07/2020",
     projectName:
@@ -83,7 +83,7 @@ export const EducationArray = [
   },
 ];
 
-export const items = [
+export const items: Item[] = [
   {
     title: "Movie Streaming App - React Native",
     description:
