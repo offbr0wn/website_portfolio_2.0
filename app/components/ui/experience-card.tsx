@@ -1,3 +1,4 @@
+import { ArrayDataItem } from "@/app/types/types";
 import {
   CardHeader,
   Button,
@@ -11,7 +12,11 @@ import { FaHeart, FaPause, FaPlaneArrival, FaShapes } from "react-icons/fa";
 import { FaDiagramNext } from "react-icons/fa6";
 import { FaArrowTrendUp } from "react-icons/fa6";
 
-export default function ExperienceCard({ experience }) {
+export default function ExperienceCard({
+  experience,
+}: {
+  experience: ArrayDataItem;
+}) {
   return (
     <Card
       isBlurred
@@ -20,14 +25,6 @@ export default function ExperienceCard({ experience }) {
       isHoverable
     >
       <CardHeader className="relative sm:col-span-full sm:pb-0 items-start col-span-2">
-        {/* <Image
-          alt="Album cover"
-          className="object-cover"
-          height={200}
-          shadow="md"
-          src="https://nextui.org/images/album-cover.png"
-          width="100%"
-        /> */}
         <h4 className="font-medium text-xs tracking-wide uppercase">
           {experience?.data}
         </h4>
@@ -40,7 +37,7 @@ export default function ExperienceCard({ experience }) {
               <div className="flex flex-col gap-0">
                 <h2 className=" font-bold text-base  capitalize leading-snug  text-slate-200 ">
                   <Link
-                    href={experience?.projectLink ?? null }
+                    href={experience?.projectLink ?? null}
                     className="  inline-flex   text-foreground/90 hover:text-red-400 focus-visible:text-red-400"
                     target="_blank"
                   >
