@@ -8,6 +8,7 @@ import Footer from "./components/footer";
 import { Providers } from "./providers";
 import LocalFont from "next/font/local";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from '@vercel/analytics/react';
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -49,13 +50,16 @@ export default function RootLayout({
         [inter.variable, calSans.variable].join(" ")
       )}
     >
+      <head>
+        <SpeedInsights />
+        <Analytics />
+      </head>
       <body className="  bg-gradient-to-tl from-black via-zinc-400/20 to-black bg-black overflow-x-hidden antialiased selection:bg-red-400 selection:text-red-900">
         <Suspense fallback={<Loading />}>
           <Providers>
             <div className="flex flex-col min-h-screen   dark text-foreground">
               <main className="flex justify-center   flex-col  px-6 py-12 md:px-12 md:py-10">
                 {children}
-                <SpeedInsights />
               </main>
               <Footer />
             </div>
