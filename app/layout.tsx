@@ -7,8 +7,7 @@ import { cn } from "./utils/cn";
 import Footer from "./components/footer";
 import { Providers } from "./providers";
 import LocalFont from "next/font/local";
-import NavBar from "./components/ui/nav-bar";
-import { headers } from "next/headers";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -56,6 +55,7 @@ export default function RootLayout({
             <div className="flex flex-col min-h-screen   dark text-foreground">
               <main className="flex justify-center   flex-col  px-6 py-12 md:px-12 md:py-10">
                 {children}
+                <SpeedInsights />
               </main>
               <Footer />
             </div>
