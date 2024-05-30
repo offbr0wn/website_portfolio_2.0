@@ -2,7 +2,7 @@
 import { cn } from "@/app/utils/cn";
 import Link from "next/link";
 import { useRef, useState } from "react";
-
+import { Image } from "@nextui-org/react";
 export const BentoGrid = ({
   className,
   children,
@@ -86,8 +86,16 @@ export const BentoGridItem = ({
         background: `radial-gradient(400px circle at ${position.x}px ${position.y}px, rgba(255,182,255,.1), transparent 100%)`,
       }}
     >
-      {header}
       <div className="group-hover/bento:translate-x-2 transition duration-200">
+        {header && (
+          <Image
+            width={1000}
+            height={1000}
+            alt="NextUI hero Image with delay"
+            src={header}
+            className="w-full  flex flex-1 max-h-[6rem] rounded-xl  z-20 pb-2 object-center object-cover"
+          />
+        )}
         {icon}
         <div className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-xl font-display">
           {title}
@@ -97,7 +105,7 @@ export const BentoGridItem = ({
         </div>
         <div className="py-1">
           <Link href={link || "/"} target="_blank">
-            <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
+            <p className=" text-zinc-200 hover:text-zinc-50  lg:block">
               Read more <span aria-hidden="true">&rarr;</span>
             </p>
           </Link>

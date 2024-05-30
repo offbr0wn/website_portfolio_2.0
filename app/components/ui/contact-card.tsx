@@ -16,19 +16,18 @@ export default function ContactCard({
   };
 }): React.ReactElement {
   return (
-    <BackgroundGradient className=" bg-zinc-800 rounded-xl ">
+    <BackgroundGradient className=" bg-zinc-900 rounded-[22px]  h-full  w-full">
       <motion.div
         whileHover={{
           scale: 1.05,
         }}
-
-        //   style={{ width: 64, height: 64 }}
+       className="h-full"
       >
-        <Card className="w-[100%] h-auto " isHoverable isPressable isBlurred>
+        <Card className="w-full h-full  relative" isPressable isBlurred>
           <Link
             href={socials.href}
             target="_blank"
-            className=" p-20  flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24  lg:pb-48  md:p-16  bg-gradient-to-br opacity-100  via-zinc-100/10  transition group-hover:opacity-50  hover:border-zinc-400/50 border-zinc-600"
+            className=" py-10 sm:p-10 flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24  lg:pb-48   bg-gradient-to-br opacity-100  via-zinc-100/10  transition group-hover:opacity-50  hover:border-zinc-400/50 border-zinc-600 h-full"
           >
             <span
               className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-500 via-zinc-500/50 to-transparent"
@@ -38,7 +37,7 @@ export default function ContactCard({
               {socials.icon}
             </span>
             <div className="z-10 flex flex-col  items-center">
-              <span className=" font-medium  duration-150  text-zinc-200 group-hover:text-white font-display md:text-xl">
+              <span className=" font-medium  duration-150  text-zinc-200 group-hover:text-white font-calSans  md:text-xl text-wrap break-all whitespace-pre-wrap">
                 {socials.handle}
               </span>
               <span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">

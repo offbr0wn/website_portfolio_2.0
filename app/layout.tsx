@@ -53,7 +53,7 @@ export default function RootLayout({
         [inter.variable, calSans.variable].join(" ")
       )}
     >
-      <body className="  bg-gradient-to-tl from-black via-zinc-400/20 to-black bg-black overflow-x-hidden">
+      <body className="  bg-gradient-to-tl from-black via-zinc-400/20 to-black bg-black overflow-x-hidden antialiased selection:bg-red-400 selection:text-red-900">
         <Suspense fallback={<Loading />}>
           <Providers>
             <div className="flex flex-col min-h-screen   dark text-foreground">
