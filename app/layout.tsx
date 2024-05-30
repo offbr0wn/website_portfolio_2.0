@@ -29,9 +29,6 @@ export const metadata: Metadata = {
     title: "Shashank Ravikumar",
     card: "summary_large_image",
   },
-  icons: {
-    shortcut: "/favicon.png",
-  },
 };
 
 const calSans = LocalFont({
