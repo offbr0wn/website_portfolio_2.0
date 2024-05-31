@@ -27,7 +27,7 @@ export default function ContactCard({
           <Link
             href={socials.href}
             target="_blank"
-            className=" py-10 sm:p-10 flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24  lg:pb-48   bg-gradient-to-br opacity-100  via-zinc-100/10  transition group-hover:opacity-50  hover:border-zinc-400/50 border-zinc-600 h-full"
+            className=" py-10 sm:p-10 flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24  lg:pb-48   bg-gradient-to-br opacity-100  via-zinc-100/10  transition group-hover:opacity-50  hover:border-zinc-400/50 border-zinc-600 h-full w-full"
           >
             <span
               className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-500 via-zinc-500/50 to-transparent"
